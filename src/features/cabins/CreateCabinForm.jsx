@@ -78,9 +78,7 @@ function CreateCabinForm() {
       <FormRow label={"Discount"} errorMsg={errors?.discount?.message}>
         <Input type="number" id="discount" disabled={isCreating} defaultValue={0} {...register("discount", {
           required: requiredField,
-          validate: (value) => {
-            return value <= getValues().regularPrice || "Discount should be less than regular price.";
-          }
+          validate: (value) => value <= getValues().regularPrice || "Discount should be less than regular price."
         })} />
       </FormRow>
 
