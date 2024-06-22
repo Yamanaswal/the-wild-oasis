@@ -55,6 +55,7 @@ function CabinTable() {
         <div></div>
       </TableHeader>
 
+      {/* Cabin Listing Here. */}
       {
         cabins.map((cabin) => <CabinRow cabin={cabin} key={cabin.id} />)
       }
