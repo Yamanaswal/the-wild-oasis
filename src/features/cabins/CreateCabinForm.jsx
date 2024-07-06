@@ -55,7 +55,8 @@ function CreateCabinForm() {
   const requiredField = "This field is required";
 
   return (
-    <Form onSubmit={handleSubmit(onSubmit, onError)}>
+    <Form
+      onSubmit={handleSubmit(onSubmit, onError)}>
 
       <FormRow label={"Cabin name"} errorMsg={errors?.name?.message} >
         <Input type="text" id="name" disabled={isCreating} {...register("name", {
